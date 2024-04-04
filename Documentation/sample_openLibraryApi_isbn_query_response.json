@@ -1,0 +1,232 @@
+{
+  "records": {
+    "/books/OL393852M": {
+      "isbns": [
+        "0898706866"
+      ],
+      "issns": [],
+      "lccns": [
+        "98071259"
+      ],
+      "oclcs": [
+        "41224897"
+      ],
+      "olids": [
+        "OL393852M"
+      ],
+      "publishDates": [
+        "1999"
+      ],
+      "recordURL": "http://openlibrary.org/books/OL393852M/Mary_and_the_fathers_of_the_church",
+      "data": {
+        "url": "http://openlibrary.org/books/OL393852M/Mary_and_the_fathers_of_the_church",
+        "key": "/books/OL393852M",
+        "title": "Mary and the fathers of the church",
+        "subtitle": "the Blessed Virgin Mary in patristic thought",
+        "authors": [
+          {
+            "url": "http://openlibrary.org/authors/OL244301A/Luigi_Gambero",
+            "name": "Luigi Gambero"
+          }
+        ],
+        "number_of_pages": 439,
+        "pagination": "439 p. ;",
+        "by_statement": "Luigi Gambero ; translated by Thomas Buffer.",
+        "identifiers": {
+          "goodreads": [
+            "1774496"
+          ],
+          "librarything": [
+            "277051"
+          ],
+          "isbn_10": [
+            "0898706866"
+          ],
+          "lccn": [
+            "98071259"
+          ],
+          "oclc": [
+            "41224897"
+          ],
+          "openlibrary": [
+            "OL393852M"
+          ]
+        },
+        "classifications": {
+          "lc_classifications": [
+            "BT612 .G3613 1999",
+            "BT612.G3613 1999"
+          ],
+          "dewey_decimal_class": [
+            "232.91/09/015"
+          ]
+        },
+        "publishers": [
+          {
+            "name": "Ignatius Press"
+          }
+        ],
+        "publish_places": [
+          {
+            "name": "San Francisco"
+          }
+        ],
+        "publish_date": "1999",
+        "subjects": [
+          {
+            "name": "History of doctrines",
+            "url": "https://openlibrary.org/subjects/history_of_doctrines"
+          },
+          {
+            "name": "Fathers of the church",
+            "url": "https://openlibrary.org/subjects/fathers_of_the_church"
+          },
+          {
+            "name": "Mary, blessed virgin, saint, theology",
+            "url": "https://openlibrary.org/subjects/mary,_blessed_virgin,_saint,_theology"
+          },
+          {
+            "name": "Pères de l'Église",
+            "url": "https://openlibrary.org/subjects/pères_de_l'église"
+          },
+          {
+            "name": "Doctrinal Theology",
+            "url": "https://openlibrary.org/subjects/doctrinal_theology"
+          }
+        ],
+        "subject_people": [
+          {
+            "name": "Mary Blessed Virgin, Saint",
+            "url": "https://openlibrary.org/subjects/person:mary_blessed_virgin,_saint"
+          }
+        ],
+        "subject_times": [
+          {
+            "name": "Early church, ca. 30-600",
+            "url": "https://openlibrary.org/subjects/time:early_church,_ca._30-600"
+          }
+        ],
+        "notes": "Includes bibliographical references and indexes.",
+        "ebooks": [
+          {
+            "preview_url": "https://archive.org/details/maryfathersofchu0000gamb",
+            "availability": "borrow",
+            "formats": {},
+            "borrow_url": "https://openlibrary.org/books/OL393852M/Mary_and_the_fathers_of_the_church/borrow",
+            "checkedout": false
+          }
+        ],
+        "cover": {
+          "small": "https://covers.openlibrary.org/b/id/698333-S.jpg",
+          "medium": "https://covers.openlibrary.org/b/id/698333-M.jpg",
+          "large": "https://covers.openlibrary.org/b/id/698333-L.jpg"
+        }
+      },
+      "details": {
+        "bib_key": "isbn:9780898706864",
+        "info_url": "http://openlibrary.org/books/OL393852M/Mary_and_the_fathers_of_the_church",
+        "preview": "borrow",
+        "preview_url": "https://archive.org/details/maryfathersofchu0000gamb",
+        "thumbnail_url": "https://covers.openlibrary.org/b/id/698333-S.jpg",
+        "details": {
+          "publishers": [
+            "Ignatius Press"
+          ],
+          "number_of_pages": 439,
+          "subtitle": "the Blessed Virgin Mary in patristic thought",
+          "isbn_10": [
+            "0898706866"
+          ],
+          "covers": [
+            698333
+          ],
+          "lc_classifications": [
+            "BT612 .G3613 1999",
+            "BT612.G3613 1999"
+          ],
+          "key": "/books/OL393852M",
+          "authors": [
+            {
+              "key": "/authors/OL244301A",
+              "name": "Luigi Gambero"
+            }
+          ],
+          "publish_places": [
+            "San Francisco"
+          ],
+          "work_title": [
+            "Maria nel pensiero dei padri della Chiesa."
+          ],
+          "subject_time": [
+            "Early church, ca. 30-600."
+          ],
+          "pagination": "439 p. ;",
+          "source_records": [
+            "bwb:9780898706864",
+            "ia:maryfathersofchu0000gamb",
+            "promise:bwb_daily_pallets_2022-03-17",
+            "marc:marc_columbia/Columbia-extract-20221130-010.mrc:31003014:4339",
+            "idb:9780898706864"
+          ],
+          "title": "Mary and the fathers of the church",
+          "dewey_decimal_class": [
+            "232.91/09/015"
+          ],
+          "notes": {
+            "type": "/type/text",
+            "value": "Includes bibliographical references and indexes."
+          },
+          "identifiers": {
+            "goodreads": [
+              "1774496"
+            ],
+            "librarything": [
+              "277051"
+            ]
+          },
+          "languages": [
+            {
+              "key": "/languages/eng"
+            }
+          ],
+          "lccn": [
+            "98071259"
+          ],
+          "subjects": [
+            "Mary, Blessed Virgin, Saint -- History of doctrines -- Early church, ca. 30-600.",
+            "Fathers of the church."
+          ],
+          "publish_date": "1999",
+          "publish_country": "cau",
+          "by_statement": "Luigi Gambero ; translated by Thomas Buffer.",
+          "oclc_numbers": [
+            "41224897"
+          ],
+          "works": [
+            {
+              "key": "/works/OL2023491W"
+            }
+          ],
+          "type": {
+            "key": "/type/edition"
+          },
+          "ocaid": "maryfathersofchu0000gamb",
+          "local_id": [
+            "urn:bwbsku:T2-BNU-366"
+          ],
+          "latest_revision": 11,
+          "revision": 11,
+          "created": {
+            "type": "/type/datetime",
+            "value": "2008-04-01T03:28:50.625462"
+          },
+          "last_modified": {
+            "type": "/type/datetime",
+            "value": "2023-12-20T00:46:31.199721"
+          }
+        }
+      }
+    }
+  },
+  "items": []
+}
