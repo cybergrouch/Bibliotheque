@@ -9,3 +9,6 @@ docker-scan-image-vulnerabilities:
 
 gcloud-upload:
 	deploy.sh
+
+git-push-current-branch:
+	git push upstream `git branch --show-current` --force 
