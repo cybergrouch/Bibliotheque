@@ -1,13 +1,9 @@
 package com.lange.biblioteque.graphql
 
 import com.apurebase.kgraphql.schema.dsl.SchemaBuilder
-import com.lange.biblioteque.data.RepositoryFactory
-import com.lange.biblioteque.data.openlibrary.OpenLibraryRepository
 import com.lange.biblioteque.domain.book.*
 
-fun SchemaBuilder.bookSchema(
-    openLibraryRepository: OpenLibraryRepository = RepositoryFactory.openLibraryRepository
-) {
+fun SchemaBuilder.bookSchema() {
     type<BookDataResponse> {
         description = "Information about a book"
     }
@@ -39,7 +35,11 @@ fun SchemaBuilder.bookSchema(
     query("book") {
         description = "Returns information about a book"
         resolver { isbn: String ->
-            openLibraryRepository.getBookDataViaIsbn(isbn = isbn)
+            SearchBookUseCase().execute(
+                request = SearchBookUseCase.Request(
+                    isbn = isbn
+                )
+            ).data
         }
     }
 }

@@ -4,14 +4,15 @@ import kotlinx.serialization.Serializable
 
 @Serializable
 data class BookDataResponse(
-    val titles: List<BookTitle>,
-    val authors: List<String>?,
-    val publishers: List<String>?,
-    val publishPlaces: List<String>?,
-    val publicationYear: String?,
-    val identifiers: List<BookIdentity>?,
-    val bookImages: List<BookImage>?,
-    val subjectTags: List<String>
+    val titles: List<BookTitle>? = null,
+    val authors: List<String>? = null,
+    val publishers: List<String>? = null,
+    val publishPlaces: List<String>? = null,
+    val publicationYear: String? = null,
+    val identifiers: List<BookIdentity>? = null,
+    val bookImages: List<BookImage>? = null,
+    val subjectTags: List<String>? = null,
+    val errors: List<BookError>? = null
 )
 
 @Serializable
@@ -30,6 +31,11 @@ data class BookIdentity(
 data class BookImage(
     val imageType: BookImageType,
     val imageUrl: String
+)
+
+@Serializable
+data class BookError(
+    val message: String
 )
 
 enum class BookIdentifier {
