@@ -1,4 +1,4 @@
-package com.lange.biblioteque.api.v1.isbn.openlibrary
+package com.lange.biblioteque.data.openlibrary
 
 import kotlinx.serialization.SerialName
 import kotlinx.serialization.Serializable

@@ -1,7 +1,7 @@
-package com.lange.biblioteque.api.v1.isbn
+package com.lange.biblioteque.graphql
 
 import com.apurebase.kgraphql.schema.dsl.SchemaBuilder
-import com.lange.biblioteque.client
+import com.lange.biblioteque.domain.book.*
 
 fun SchemaBuilder.bookSchema() {
     type<BookDataResponse> {
@@ -35,7 +35,11 @@ fun SchemaBuilder.bookSchema() {
     query("book") {
         description = "Returns information about a book"
         resolver { isbn: String ->
-            client.getBookDataViaIsbn(isbn = isbn)
+            SearchBookUseCase().execute(
+                request = SearchBookUseCase.Request(
+                    isbn = isbn
+                )
+            ).data
         }
     }
 }
