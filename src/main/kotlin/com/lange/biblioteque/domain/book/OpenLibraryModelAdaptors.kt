@@ -1,48 +1,7 @@
-package com.lange.biblioteque.api.v1.isbn
+package com.lange.biblioteque.domain.book
 
-import com.lange.biblioteque.api.v1.isbn.openlibrary.*
-import io.ktor.client.*
-import io.ktor.client.call.*
-import io.ktor.client.request.*
-import kotlinx.serialization.Serializable
+import com.lange.biblioteque.data.openlibrary.*
 
-/**
- * Fetches the [BookDataResponse] for a given ISBN
- *
- * @receiver client The HTTP client to make the request from
- * @param isbn The ISBN-10 (no dashes) of the book
- */
-suspend fun HttpClient.getBookDataViaIsbn(isbn: String): BookDataResponse? =
-    "http://openlibrary.org/api/volumes/brief/isbn/$isbn.json".let { url ->
-        this.get(url)
-    }.let { response ->
-        response.body() as? OpenLibraryIsbnResponse
-    }?.toBookDataResponse(isbn = isbn)
-
-
-@Serializable
-data class BookDataResponse(
-    val titles: List<BookTitle>,
-    val authors: List<String>?,
-    val publishers: List<String>?,
-    val publishPlaces: List<String>?,
-    val publicationYear: String?,
-    val identifiers: List<BookIdentity>?,
-    val bookImages: List<BookImage>?,
-    val subjectTags: List<String>
-)
-
-enum class BookIdentifier {
-    ISBN, ISBN_10, LC, DD, OCLC, LCCN, OPENLIBRARY, LIBRARYTHING, GOODREADS,
-}
-
-enum class BookImageType {
-    FRONT_COVER
-}
-
-enum class BookTitleDescriptorType {
-    TITLE, SUBTITLE
-}
 
 fun OpenLibraryIsbnResponse.toBookDataResponse(isbn: String): BookDataResponse? =
     this.records?.entries?.firstOrNull()?.value?.data?.let { bookRecord ->
@@ -65,12 +24,6 @@ fun OpenLibraryIsbnResponse.toBookDataResponse(isbn: String): BookDataResponse? 
             )
         )
     }
-
-@Serializable
-data class BookTitle(
-    val titleType: BookTitleDescriptorType,
-    val title: String
-)
 
 val OpenLibraryBookData.mapToTitles: List<BookTitle>
     get() =
@@ -148,13 +101,6 @@ val OpenLibraryBookIdentifiers.mapToIdentifiers: List<BookIdentity>
             } ?: arrayOf())
         )
 
-
-@Serializable
-data class BookIdentity(
-    val identifierType: BookIdentifier,
-    val identifier: String
-)
-
 val OpenLibraryBookClassifications.mapToIdentifiers: List<BookIdentity>
     get() =
         listOf(
@@ -195,12 +141,6 @@ fun createIdentifiers(
     }.also { aggregate ->
         classifications?.mapToIdentifiers?.let { aggregate.addAll(it) }
     }
-
-@Serializable
-data class BookImage(
-    val imageType: BookImageType,
-    val imageUrl: String
-)
 
 val OpenLibraryBookCover.mapToBookImages: List<BookImage>
     get() =
